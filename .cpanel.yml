@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/msit/public_html/msitbd
+    - export DEPLOYPATH=/home2/msit/public_html/pos
     - /bin/cp * $DEPLOYPATH
