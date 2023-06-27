@@ -11,6 +11,15 @@
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="stylesheet" href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/themify-icons/css/themify-icons.css') }}">
@@ -48,12 +57,8 @@
                         <a href="#"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Dashboard </a></li>
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Products </a></li>
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Suppliers </a></li>
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Customers </a></li>
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Purchase </a></li>
-                    <li><a href="#"> <i class="menu-icon ti-email"></i>Sales </a></li>
+                    <li><a href="{{ route('category.display') }}"> <i class="menu-icon ti-email"></i>Category </a></li>
+
 <!--
                     <h3 class="menu-title">UI elements</h3>
                     <li class="menu-item-has-children dropdown">

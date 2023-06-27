@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +32,20 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+    //Products Routes
+    Route::get('/category/list', [CategoryController::class, 'display'])->name('category.display');
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+    Route::post('/category/delete', [CategoryController::class, 'delete'])->name('category.delete');
+    Route::post('/category/update', [CategoryController::class, 'update'])->name('category.update');
+    Route::get('/category/paginate', [CategoryController::class, 'paginate'])->name('category.paginate');
+    Route::get('/category/search', [CategoryController::class, 'search'])->name('category.search');
+
+
 });
+
+
 
 
 
