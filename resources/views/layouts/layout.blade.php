@@ -57,7 +57,9 @@
                         <a href="#"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
-                    <li><a href="{{ route('category.display') }}"> <i class="menu-icon ti-email"></i>Category </a></li>
+                    <li><a href="{{ route('category.display') }}"> <i class="menu-icon ti-email"></i>Categories </a></li>
+                    <li><a href="{{ route('subcategory.display') }}"> <i class="menu-icon ti-email"></i>Sub Categories </a></li>
+                    <li><a href="{{ route('products.display') }}"> <i class="menu-icon ti-email"></i>Products </a></li>
 
 <!--
                     <h3 class="menu-title">UI elements</h3>
